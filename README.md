@@ -26,7 +26,7 @@ our version is now 3.4.4
 
 ## Code Structure
 
-- `Main.java`: Main application file. User interface and basic operations are implemented here.
+- `OnlineBankingSystem.java`: Main application file. User interface and basic operations are implemented here.
 - `DatabaseManager.java`: Database connection and basic database operations are handled here.
 - `LoginManager.java`: Login management and user login statuses are managed in this file.
 - `README.md`: File containing general information about the project and installation steps.
