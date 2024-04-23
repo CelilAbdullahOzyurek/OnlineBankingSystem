@@ -10,37 +10,20 @@ package onlinebankingsystem;
  */
 public class OnlineBankingSystem {
 
- 
     public static void main(String[] args) {
-        
-        
-        
 
+        // Add new user
+        DatabaseManager.getConnection();
+        DatabaseManager.addNewUser("Ali", "Ali@gmail", "aliil1234");
 
-// Add new user 
-DatabaseManager.getConnection();
-DatabaseManager.addNewUser("Ali", "Ali@gmail", "aliil1234");
+        // Login
 
+        // DatabaseManager.login("Celil@1234","celil1234" );
 
+        // Change email and password
 
-//Login
-
-//DatabaseManager.login("Celil@1234","celil1234" );
-        
-
-        
-// Change email  and password  
-
-//DatabaseManager.updateUserInfo( 6 , "a@gmail", "123456A");
-        
-        
-  
-
-
-
-
-
+        // DatabaseManager.updateUserInfo( 6 , "a@gmail", "123456A");
 
     }
-    
+
 }
