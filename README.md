@@ -11,9 +11,9 @@ FR-3: Users can send money to other users using their unique account numbers. �
 
 FR-4: Users can receive money from other users.✔
 
-FR-5: Users can see their money flow.
+FR-5: Users can see their money flow. ❌
 
-FR-6: Users can store their money in a few different currencies. 
+FR-6: Users can store their money in a few different currencies. ❌
 
 FR-7: Users can deposit or withdraw their money from their accounts.✔
 
@@ -21,7 +21,7 @@ FR-8: Users can delete their accounts, only if they don’t have any money insid
 
 FR-9: Users can change their email and password only after logging in. ✔
 
-FR-10: Users can take credit from bank.
+FR-10: Users can take credit from bank.❌
 
 
 ##  Sqllitestudio   
