@@ -2,7 +2,7 @@
 
 Online Banking System is a software application that allows users to manage their banking transactions. This project enables users to create accounts, log in, transfer money, update information, and perform other banking operations.
 
-
+# Functional Requirements
 FR-1: Users can register for a new account using a name, a password, and an email address.
 
 FR-2: Users can log in to their account any time after creating it.
