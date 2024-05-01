@@ -53,6 +53,7 @@ our version is now 3.4.4
 - `README.md`: File containing general information about the project and installation steps.
 - `Users.java`: Class representing user data and operations related to users.
 - `BankingSystem.java`: Class containing main banking operations and logic.
+- `Admin.java`:  Class representing Admins data and operations related to Admins.
 
 ## Installation
 
