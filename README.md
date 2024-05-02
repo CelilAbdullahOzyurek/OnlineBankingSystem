@@ -2,6 +2,12 @@
 
 Online Banking System is a software application that allows users to manage their banking transactions. This project enables users to create accounts, log in, transfer money, update information, and perform other banking operations.
 
+#ToBeFix
+1 - user class uses admin as superclass and this causes users to access admin methods they shouldn't (viewAllUsersInfo etc) .
+2 - admin class doesn't have the methods even the user has(closeAccount,resetPassword,createAccount etc)
+3 - some classes has unused and unnecessery variables and methods( for example  user class balance variable and getter setter methods of it)
+4 - users are able to withdraw negative money which doesn't make any  sense .
+
 # Functional Requirements
 FR-1: Users can register for a new account using a name, a password, and an email address. ✔
 
