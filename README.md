@@ -11,6 +11,8 @@ Online Banking System is a software application that allows users to manage thei
 
 4 - users are able to withdraw negative money which doesn't make any  sense .
 
+5-  Make the BankingSystem abstract and change the other class according to this.
+
 # Functional Requirements
 FR-1: Users can register for a new account using a name, a password, and an email address. ✔
 
