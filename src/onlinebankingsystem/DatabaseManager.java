@@ -76,10 +76,10 @@ public class DatabaseManager {
     }
 
     // print user list
-    public static void printUserList(ArrayList<User> userList) {
+    public static void printUserList(ArrayList<Customer> userList) {
         System.out.println("User List:");
         System.out.println("----------------------------------");
-        for (User user : userList) {
+        for (Customer user : userList) {
             System.out.println("Name: " + user.getName());
             System.out.println("Email " + user.getEmail());
             System.out.println("Balance: " + user.getBalance());
@@ -89,8 +89,8 @@ public class DatabaseManager {
     }
 
     // Get all user info in ArrayList
-    public static ArrayList<User> getAllUsersInfo() {
-        ArrayList<User> users = new ArrayList<>();
+    public static ArrayList<Customer> getAllUsersInfo() {
+        ArrayList<Customer> users = new ArrayList<>();
         String sql = "SELECT * FROM Users";
         try (Connection connection = DriverManager.getConnection(url); PreparedStatement statement = connection.prepareStatement(sql); ResultSet resultSet = statement.executeQuery()) {
 
@@ -101,7 +101,7 @@ public class DatabaseManager {
                 double balance = resultSet.getDouble("balance");
                 int uniq_Id = resultSet.getInt("uniq_Id");
 
-                User user = new User(name, email, password);
+                Customer user = new Customer(name, email, password);
                 user.setBalance(balance);
                 user.setUniqId(uniq_Id);
 

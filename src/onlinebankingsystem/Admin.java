@@ -5,23 +5,17 @@
 package onlinebankingsystem;
 
 import java.util.ArrayList;
-
+import java.util.Scanner;
 /**
  *
  * @author celil
  */
-public class Admin {
+public class Admin  extends User{
 
-    protected String name;
-    protected String email;
-    protected String password;
-
-    public Admin(String name, String email, String password) {
-        this.name = name;
-        this.email = email;
-        this.password = password;
+    public Admin(String name,String email,String password) {
+        super(name,email,password);
     }
-    
+    Scanner scanner = new Scanner(System.in);
     //view spesific user balance
     public double viewUserBalance(String email) {
       
@@ -33,10 +27,62 @@ public class Admin {
     //view all user 
     public  void viewAllUsers(){
     
-     ArrayList<User> userList = DatabaseManager.getAllUsersInfo();   
+     ArrayList<Customer> userList = DatabaseManager.getAllUsersInfo();   
      DatabaseManager.printUserList(userList);
      
          
     }
-   
+
+    @Override
+    public void withdrawMoney() {
+        double amount = 0;
+        System.out.println("please enter the amount of money you want to draw");
+        amount = scanner.nextDouble();
+        System.out.println();
+        System.out.println("please enter the userId of the person you want to draw money");
+        int giverId = scanner.nextInt();
+        if (LoginManager.isLoggedIn()) {
+            
+            balance = DatabaseManager.getUserBalance(giverId);
+            if (balance >= amount) {
+                balance -= amount;
+                
+                DatabaseManager.updateUserInfo(giverId, balance);
+
+            } else {
+                System.out.println("user doesn't have enough money");
+
+            }
+
+        } else {
+            System.out.println("you are not logged in");
+        }
+
+
+    }
+
+    @Override
+    public void depositMoney() {
+      double amount = 0;
+        System.out.println("please enter the amount of money you want to deposit");
+       amount = scanner.nextDouble();
+        System.out.println();
+        System.out.println("please enter the userId of the person you want to deposit money");
+       int getterId = scanner.nextInt();
+        if (amount > 0) {
+            if (LoginManager.isLoggedIn()) {
+                balance = DatabaseManager.getUserBalance(getterId);
+                balance += amount;
+                DatabaseManager.updateUserInfo(getterId, balance);
+
+            } else {
+                System.out.println("you need to login to deposit money");
+            }
+        } else {
+
+            System.out.println("You can't deposit negative money");
+        }
+    }
+
+    
 }

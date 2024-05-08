@@ -12,15 +12,19 @@ public class OnlineBankingSystem {
 
     public static void main(String[] args) {
 
-    
-      // use this for user methods 
-      //User user = new User( "nane", "exampl@example.com", "password" );
+DatabaseManager.getConnection();
+      
+      Customer customer = new Customer( "ali", "example2@example.com", "example" );
+       //customer.createAccount();
+       
+       //customer.depositMoney();
+       customer.guessTossedCoin();
        
           
     //  user this for admin methodts   
-   // Admin admin = new Admin("Admin","admin@example.com" ,"adminpassword" );  
-   // admin.viewAllUsers();
-     
+   Admin admin = new Admin("Admin","admin@example.com" ,"adminpassword" );  
+ 
+     admin.viewAllUsers();
    
     
     
