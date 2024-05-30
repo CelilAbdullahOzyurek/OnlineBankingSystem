@@ -19,10 +19,10 @@ FR-7: Users can change their email and password only after logging in. ✔
 
 
 
+
 ##  Sqllitestudio   
 https://github.com/pawelsalawa/sqlitestudio/releases
-
- (We are using old version!!!) our version is now 3.4.4
+(We are using old version!!!) our version is now 3.4.4
 
 
 
@@ -51,13 +51,14 @@ https://github.com/pawelsalawa/sqlitestudio/releases
 - `Users.java`: Class representing user data and operations related to users.
 - `BankingSystem.java`: Class containing main banking operations and logic.
 - `Admin.java`:  Class representing Admins data and operations related to Admins.
-
+- `Customer.java`:User class containing basic user methods and attributes belong to user.
+- 
 ## Installation
 
 1. Clone or download the project.
 2. Open the project in NetBeans IDE or your preferred Java IDE.
 3. Add the SQLite JDBC driver to the project.
-4. Run `Main.java` to start the application.
+4. Run `OnlineBankingSystem.java` to start the application.
 
 ## Usage
 
