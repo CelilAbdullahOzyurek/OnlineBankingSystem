@@ -2,17 +2,6 @@
 
 Online Banking System is a software application that allows users to manage their banking transactions. This project enables users to create accounts, log in, transfer money, update information, and perform other banking operations.
 
-# ToBeFix
-1 - user class uses admin as superclass and this causes users to access admin methods they shouldn't (viewAllUsersInfo etc) .
-
-2 - admin class doesn't have the methods even the user has(closeAccount,resetPassword,createAccount etc)
-
-3 - some classes has unused and unnecessery variables and methods( for example  user class balance variable and getter setter methods of it)
-
-4 - users are able to withdraw negative money which doesn't make any  sense .
-
-5-  Make the BankingSystem abstract and change the other class according to this.
-
 # Functional Requirements
 FR-1: Users can register for a new account using a name, a password, and an email address. ✔
 
@@ -22,23 +11,21 @@ FR-3: Users can send money to other users using their unique account numbers. �
 
 FR-4: Users can receive money from other users.✔
 
-FR-5: Users can see their money flow. ❌
+FR-5: Users can deposit or withdraw their money from their accounts.✔
 
-FR-6: Users can store their money in a few different currencies. ❌
+FR-6: Users can delete their accounts, only if they don’t have any money inside the app.✔
 
-FR-7: Users can deposit or withdraw their money from their accounts.✔
+FR-7: Users can change their email and password only after logging in. ✔
 
-FR-8: Users can delete their accounts, only if they don’t have any money inside the app.✔
-
-FR-9: Users can change their email and password only after logging in. ✔
-
-FR-10: Users can take credit from bank.❌
+FR-8: Users can take credit from bank.❌
 
 
 ##  Sqllitestudio   
 https://github.com/pawelsalawa/sqlitestudio/releases
 
-our version is now 3.4.4
+ (We are using old version!!!) our version is now 3.4.4
+
+
 
 ## Requirements
 
