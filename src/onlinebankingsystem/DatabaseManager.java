@@ -293,6 +293,7 @@ public class DatabaseManager {
     public static void getConnection() {
         try {
             connection = DriverManager.getConnection(url);
+            
         } catch (SQLException e) {
             System.out.println("Database Connection Eror: " + e.getMessage());
         }

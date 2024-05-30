@@ -15,10 +15,8 @@ import java.util.Scanner;
              String tossCoin();
              void guessTossedCoin();
 }
-     
- 
-   
-     
+
+
      
 public class Customer extends User implements CoinGuess{
 
@@ -99,22 +97,26 @@ public class Customer extends User implements CoinGuess{
 
     @Override
     public void guessTossedCoin() {
-       
+       int betAmount= 50;
         
          Scanner scanner = new Scanner(System.in);
 
         System.out.println("Welcome to the Coin Toss Game!");
+        
         System.out.println("Enter your guess (Heads or Tails):");
         String guess = scanner.nextLine().trim().toLowerCase(); // Convert input to lowercase for case-insensitive comparison
         String result = tossCoin();
 
         System.out.println("Coin toss result: " + result);
+        System.out.println(" your guess: "+ guess);
+        
+        
 
         if (guess.equals(result.toLowerCase())) {
             System.out.println("Congratulations! Your guess was correct! ");
             if (LoginManager.isLoggedIn()) {
                 balance = DatabaseManager.getUserBalance(LoginManager.getLoggedInUserId());
-                balance += 10;
+                balance += betAmount;
                 DatabaseManager.updateUserInfo(LoginManager.getLoggedInUserId(), balance);
 
             } else {
@@ -126,7 +128,7 @@ public class Customer extends User implements CoinGuess{
             
             if (LoginManager.isLoggedIn()) {
                 balance = DatabaseManager.getUserBalance(LoginManager.getLoggedInUserId());
-                balance -= 10;
+                balance -= betAmount;
                 DatabaseManager.updateUserInfo(LoginManager.getLoggedInUserId(), balance);
 
             } else {

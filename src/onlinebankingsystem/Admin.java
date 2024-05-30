@@ -5,12 +5,13 @@
 package onlinebankingsystem;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 /**
  *
  * @author celil
  */
-public class Admin  extends User{
+public class Admin  extends User implements CoinGuess{
 
     public Admin(String name,String email,String password) {
         super(name,email,password);
@@ -32,7 +33,7 @@ public class Admin  extends User{
      
          
     }
-
+    
     @Override
     public void withdrawMoney() {
         double amount = 0;
@@ -81,6 +82,67 @@ public class Admin  extends User{
         } else {
 
             System.out.println("You can't deposit negative money");
+        }
+    }
+
+   @Override
+    public void guessTossedCoin() {
+       int betAmount= 100;
+        String result="";
+         Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Welcome to the Coin Toss Game!");
+        
+        System.out.println("Enter your guess (Heads or Tails):");
+        String guess = scanner.nextLine().trim().toLowerCase(); // Convert input to lowercase for case-insensitive comparison
+        result = tossCoin();
+        if(guess=="heads" || result == "Tails"){
+         result = "Heads";
+        }
+        
+        
+        System.out.println("Coin toss result: " + result);
+        System.out.println(" your guess: "+ guess);
+        
+        
+
+        if (guess.equals(result.toLowerCase())) {
+            System.out.println("Congratulations! Your guess was correct! ");
+            if (LoginManager.isLoggedIn()) {
+                balance = DatabaseManager.getUserBalance(LoginManager.getLoggedInUserId());
+                balance += betAmount;
+                DatabaseManager.updateUserInfo(LoginManager.getLoggedInUserId(), balance);
+
+            } else {
+                System.out.println("you were not logged in to get the money");
+            } 
+    
+        } else {
+            System.out.println("Sorry! Your guess was incorrect!");
+            
+            if (LoginManager.isLoggedIn()) {
+                balance = DatabaseManager.getUserBalance(LoginManager.getLoggedInUserId());
+                balance -= betAmount;
+                DatabaseManager.updateUserInfo(LoginManager.getLoggedInUserId(), balance);
+
+            } else {
+                System.out.println("you were not logged in and didn't lose any money");
+            }
+   
+        }
+
+        scanner.close();
+    }
+        
+    @Override
+    public String tossCoin() {
+        Random random = new Random();
+        int result = random.nextInt(2); // Generates either 0 or 1
+
+        if (result == 0) {
+            return "Heads";
+        } else {
+            return "Tails";
         }
     }
 
