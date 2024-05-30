@@ -15,59 +15,47 @@ public class OnlineBankingSystem {
 DatabaseManager.getConnection();
       
       Customer customer = new Customer( "ali", "example2@example.com", "example" );
-       //customer.createAccount();
-       
+      //uses customers info to login to account 
+         customer.login();
+        //customer.closeAccount(0);
+        //customer.createAccount();
+        //customer.depositMoney();
+        //customer.guessTossedCoin();
+        //customer.transferMoney();
+        //customer.withdrawMoney();
+        //customer.getBalance();
+        //customer.getEmail();
+      
        //customer.depositMoney();
-       customer.guessTossedCoin();
+      
        
           
-    //  user this for admin methodts   
+    //  user this for admin methods   
    Admin admin = new Admin("Admin","admin@example.com" ,"adminpassword" );  
- 
-     admin.viewAllUsers();
-   
+     
+   //admin.closeAccount(0);
+   //admin.createAccount();
+   //admin.depositMoney();
+   //admin.guessTossedCoin();
+   //admin.viewAllUsers();
+   //admin.viewUserBalance("example2@example.com");
+   //admin.withdrawMoney();
+   //admin.getPassword();
+  
+  //System.out.println(admin.Birthday());
     
     
-    
-    
-    //transfer money 
-    //user.transferMoney();
-      
         
         
 
-// Add new user 
-        //DatabaseManager.getConnection();
        
         
-        
-        
-//Login
-        //DatabaseManager.login("mehmet@gmail", "mehmet");
-        
-        
-        
-//Deposit And Draw Money
-
-        //   System.out.println("balance in the first place");
-        //    System.out.println(DatabaseManager.getUserBalance(LoginManager.getLoggedInUserId()));
-        //    BankingSystem.depositMoney(-100000);
-        
-        //    System.out.println("balance after depositing money");
-        //   System.out.println(DatabaseManager.getUserBalance(LoginManager.getLoggedInUserId()));
-        //    BankingSystem.drawMoney(100);
-        
-        //   System.out.println("balance after drawing money");
-        //    System.out.println(DatabaseManager.getUserBalance(LoginManager.getLoggedInUserId()));
-        
-        
-     
-    // getAllUsersInfo    
     
-  
         
-        // close Account
-    // DatabaseManager.closeAccount(56);
+        
+        
+
+  
     }
 
 }
