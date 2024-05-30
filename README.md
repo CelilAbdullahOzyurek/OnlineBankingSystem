@@ -51,7 +51,7 @@ https://github.com/pawelsalawa/sqlitestudio/releases
 - `Users.java`: Class representing user data and operations related to users.
 - `BankingSystem.java`: Class containing main banking operations and logic.
 - `Admin.java`:  Class representing Admins data and operations related to Admins.
-- `Customer.java`:Customera class inheriting form the  user class and containining methods and attributes belong to every customer.
+- `Customer.java`:Class inheriting form the  user class and containining methods and attributes belong to every customer.
  
 ## Installation
 
