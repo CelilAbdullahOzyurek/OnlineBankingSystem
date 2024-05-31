@@ -17,6 +17,8 @@ FR-6: Users can delete their accounts, only if they don’t have any money insid
 
 FR-7: Users can change their email and password only after logging in. ✔
 
+FR-8: Users can see their previous actions (Log system) . ❌
+
 
 
 
